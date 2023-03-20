@@ -56,7 +56,10 @@ class _CartScreenState extends State<CartScreen> {
                             textAlign: TextAlign.center,
                           ),
                         );
-                      } else{
+                      } else if(snapshot.data == null){
+                        return Container();
+                      }
+                      else{
                         return ReusableButton(
                           callback: ()async{
                             String res = 'An error occurred';

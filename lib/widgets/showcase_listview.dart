@@ -61,7 +61,10 @@ class ProductsShowcaseListView extends StatelessWidget {
                   return const Center(
                     child: CircularProgressIndicator(),
                   );
-                } else {
+                } else if(snapshot.data == null){
+                  return Container();
+                }
+                else {
                   return ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: (snapshot.data! as dynamic).docs.length,
