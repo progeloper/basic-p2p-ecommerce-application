@@ -35,7 +35,7 @@ class ResultWidget extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 5.0),
               child: Text(
                 product.productName,
-                maxLines: 2,
+                maxLines:1,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
